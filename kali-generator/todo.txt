@@ -1,0 +1,34 @@
+# Refrences
+    https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet
+    https://gist.github.com/TarlogicSecurity/2f221924fef8c14a1d8e29f3cb5c5c4a
+    https://github.com/ksecurity45/OSEP
+    https://github.com/ksecurity45/OSEP/blob/main/commands-nav.md
+    https://0xsp.com/offensive/red-ops-techniques/red-team-cheatsheet
+    https://book.hacktricks.xyz/windows/basic-powershell-for-pentesters/powerview
+    https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993
+
+
+https://bloodhound.readthedocs.io/en/latest/data-collection/sharphound-all-flags.html
+
+
+# Hints to check for. 
+    1.  User Hunting.
+    2.  RestrictedAdmin 
+    3.  Kerberoast.
+    4.  ASREPRoast.
+    5.  Password Spray Attack
+    6.  Hunt for SPN accounts because they can request a TGS.
+    7.  Force Set SPN
+    8.  Unconstrained Delegation
+    9.  constrained Delegation
+    10. Resource Based Constrained Delegation
+    11. Relay attack (NTLM RELAY)
+    12. Abusing Printer_bug (Spoolsample) Breaking Forest Trusts
+    13. Abusing ACLs
+    14. Abuse MSSQL Servers
+    
+# Encrypt Powershell 
+    ./xor-ps1-script.sh SharpHound.txt
+    
+    
+    jq '. | map_values(keys)' | grep -v lnk
