@@ -1,18 +1,18 @@
-# osep-cheatgen
+# ADCheatgen
 
-This is a tool which i created for my OSEP exam. It contains all important commands to help durring the penetration testing of Active directory.
+This is a tool which I created to generate most-used techniques and commands for Microsoft Windows and Active Directory (post-)exploitation. It contains all important commands to help durring the penetration testing of Active directory.
 
 ## Usage
 
 **To Clean**
 ```
-┌──(root💀kali)-[/mnt/hgfs/Shared_Folder/OSEP-CHEATGEN/kali-generator]
+┌──(root💀kali)-[/mnt/hgfs/Shared_Folder/ADCheatgen/kali-generator]
 └─# ./cheat_gen.sh clean 
 ```
 
 **To Genearte**
 ```
-┌──(root💀kali)-[/mnt/hgfs/Shared_Folder/OSEP-CHEATGEN/kali-generator]
+┌──(root💀kali)-[/mnt/hgfs/Shared_Folder/ADCheatgen/kali-generator]
 └─# ./cheat_gen.sh > comamnds.txt
 ```
 
@@ -22,12 +22,12 @@ This is a tool which i created for my OSEP exam. It contains all important comma
 ################################################
     Online Tools
 ################################################
+https://exploit-me.com/
 https://www.revshells.com/
 https://raikia.com/tool-powershell-encoder/
 https://www.jackson-t.ca/runtime-exec-payloads.html
 https://lolbas-project.github.io/
 https://gtfobins.github.io/
-https://cheatsheet.haax.fr/windows-systems/exploitation/crackmapexec/
 https://gist.github.com/TarlogicSecurity/2f221924fef8c14a1d8e29f3cb5c5c4a  (Kerberos)
 
 # Color the text
